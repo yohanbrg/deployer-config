@@ -4,7 +4,7 @@ namespace Deployer;
 require 'recipe/common.php';
 
 // Project name
-set('application', 'my_project');
+set('application', 'deployer-test');
 
 // Project repository
 set('repository', 'https://github.com/yohanbrg/deployer-test.git');
@@ -23,8 +23,14 @@ set('allow_anonymous_stats', false);
 // Hosts
 
 host('31.15.27.87')
+    ->stage('production')
     ->user('cbuilder_ssh')
-    ->set('deploy_path', '~/{{application}}');    
+    ->set('deploy_path', '~/sites/production/{{application}}');
+    
+host('31.15.27.87')
+    ->stage('staging')
+    ->user('cbuilder_ssh')
+    ->set('deploy_path', '~/sites/staging/{{application}}');
     
 // Tasks
 
