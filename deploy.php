@@ -22,13 +22,13 @@ set('allow_anonymous_stats', false);
 
 // Hosts
 
-host('31.15.27.87')
-    ->stage('production')
+host('production')
+    ->hostname('31.15.27.87')
     ->user('cbuilder_ssh')
     ->set('deploy_path', '~/sites/production/{{application}}');
     
-host('31.15.27.87')
-    ->stage('staging')
+host('staging')
+    ->hostname('31.15.27.87')
     ->user('cbuilder_ssh')
     ->set('deploy_path', '~/sites/staging/{{application}}');
     
