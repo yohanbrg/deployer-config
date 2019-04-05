@@ -6,6 +6,9 @@ require 'recipe/common.php';
 // Project name
 set('application', 'deployer');
 
+// Repository
+set('repository', 'git@github.com:yohanbrg/deployer-test.git');
+
 // Hosts
 host('31.15.27.87')
     ->user('cbuilder_ssh')
