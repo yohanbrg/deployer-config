@@ -7,7 +7,7 @@ require 'recipe/common.php';
 set('application', 'my_project');
 
 // Project repository
-set('repository', 'git@github.com:yohanbrg/deployer-test.git');
+set('repository', 'https://github.com/yohanbrg/deployer-test.git');
 
 // [Optional] Allocate tty for git clone. Default value is false.
 set('git_tty', true); 
@@ -37,7 +37,6 @@ task('deploy', [
     'deploy:update_code',
     'deploy:shared',
     'deploy:writable',
-    'deploy:vendors',
     'deploy:clear_paths',
     'deploy:symlink',
     'deploy:unlock',
