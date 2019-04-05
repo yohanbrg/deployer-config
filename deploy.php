@@ -23,14 +23,14 @@ set('allow_anonymous_stats', false);
 // Hosts
 
 host('production')
-    ->hostname('31.15.27.87')
-    ->user('cbuilder_ssh')
+    ->hostname('XX.XX.XX.XX')
+    ->user('user_ssh')
     ->set('branch', 'master')
     ->set('deploy_path', '~/sites/production/{{application}}');
     
 host('staging')
-    ->hostname('31.15.27.87')
-    ->user('cbuilder_ssh')
+    ->hostname('XX.XX.XX.XX')
+    ->user('user_ssh_ssh')
     ->set('branch', 'env/staging')
     ->set('deploy_path', '~/sites/staging/{{application}}');
     
